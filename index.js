@@ -76,10 +76,25 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 3: Console.log just Julius' feedback */
 
+function findFeedback(name) { 
+  for(let i=0; i < reviews.length; i++) { 
+    if(reviews[i].name === name) { 
+      console.log(`${name} said: ${reviews[i].feedback}`)
+    }
+  }
+}
+
+findFeedback("Julius")
+
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+reviews.push({
+  name:"Wesley",
+  rating:4.5,
+  feedback: "The burger was great!! I wish I would have got two!"
+})
 
-
+console.log(reviews)
 /* Task 5: Add the following feedback to Reyna's rating - "burger place is chill with really cool people, great for getting work done on weekdays"
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
