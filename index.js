@@ -97,6 +97,15 @@ reviews.push({
 console.log(reviews)
 /* Task 5: Add the following feedback to Reyna's rating - "burger place is chill with really cool people, great for getting work done on weekdays"
 
+*/
+
+for(let i=0; i < reviews.length; i++) { 
+  if(reviews[i].name === "Reyna") { 
+    reviews[i].feedback = "burger place is chill with really cool people, great for getting work done on weekdays"
+  }
+}
+console.log(reviews)
+
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
  Your function should take two arguments:
@@ -109,9 +118,17 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
-function getReviewByIndex(reviews, index) {
-    /* code here */
+function getReviewByIndex(arr, index) {
+
+  for(let i=0; i < arr.length; i++) { 
+    if(arr[i] === arr[index]) { 
+      console.log(`${arr[i].name} gave the restaurant a ${arr[i].rating} star review and their feedback was: ${arr[i].feedback}`)
+    } 
   }
+}
+getReviewByIndex(reviews,0)
+
+  
   
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
